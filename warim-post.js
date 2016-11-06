@@ -158,26 +158,29 @@ var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>
 $('i[rel="pre"]').replaceWith(function() { return $('<pre><code>' + $(this).html() + '</code></pre>'); });		
 
 $(function(){ // document ready
-   if ($('#sticky').length) { // make sure "#sticky" element exists
-      var el = $('#sticky');
-      var stickyTop = $('#sticky').offset().top; // returns number
-      var stickyHeight = $('#sticky').height();
+   if ($('#LABEL1').length) { // make sure "#sticky" element exists
+      var el = $('#LABEL1');
+      var stickyTop = $('#LABEL1').offset().top; // returns number
+      var stickyHeight = $('#LABEL1').height();
 
       $(window).scroll(function(){ // scroll event
-          var limit = $('#footer').offset().top - stickyHeight - 20;
+          var limit = $('#sickystopper').offset().top - stickyHeight - 20;
 
           var windowTop = $(window).scrollTop(); // returns number
 
           if (stickyTop < windowTop){
-             el.css({ position: 'fixed', top: 0 });
+             el.css({ position: 'fixed', top: 80 });
+             el.addClass("intro");
           }
           else {
              el.css('position','static');
+             el.removeClass("intro");
           }
 
           if (limit < windowTop) {
           var diff = limit - windowTop;
           el.css({top: diff});
+          el.removeClass("intro");
           }
         });
    }
