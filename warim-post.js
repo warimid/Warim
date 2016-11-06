@@ -169,7 +169,7 @@ $(function(){ // document ready
           var windowTop = $(window).scrollTop(); // returns number
 
           if (stickyTop < windowTop){
-             el.css({ position: 'fixed', top: 80 });
+             el.css({ position: 'fixed', top: 100 });
              el.addClass("intro");
           }
           else {
