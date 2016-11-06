@@ -158,10 +158,10 @@ var randomRelatedIndex,showRelatedPost;(function(n,m,k){var d={widgetTitle:"<h4>
 $('i[rel="pre"]').replaceWith(function() { return $('<pre><code>' + $(this).html() + '</code></pre>'); });		
 
 $(function(){ // document ready
-   if ($('#LABEL1').length) { // make sure "#sticky" element exists
-      var el = $('#LABEL1');
-      var stickyTop = $('#LABEL1').offset().top; // returns number
-      var stickyHeight = $('#LABEL1').height();
+   if ($('#Label1').length) { // make sure "#sticky" element exists
+      var el = $('#Label1');
+      var stickyTop = $('#Label1').offset().top; // returns number
+      var stickyHeight = $('#Label1').height();
 
       $(window).scroll(function(){ // scroll event
           var limit = $('#sickystopper').offset().top - stickyHeight - 20;
