@@ -5,6 +5,7 @@ function myFunction() {
     document.getElementById("gcsresults").innerHTML = "<gcse:searchresults></gcse:searchresults>";
 }myFunction();
 
+
 var vidDefer = document.getElementsByTagName('iframe');
 for (var i=0; i<vidDefer.length; i++) {
 if(vidDefer[i].getAttribute('data-src')) {
